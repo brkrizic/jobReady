@@ -2,7 +2,7 @@
 export default function Home() {
   return (
     <section className="max-w-4xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-6">Welcome to CVly</h1>
+      <h1 className="text-4xl font-bold mb-6">Welcome to JobReady</h1>
       <p className="text-gray-700 mb-6">
         Build your professional CV in minutes. No signup required.
       </p>

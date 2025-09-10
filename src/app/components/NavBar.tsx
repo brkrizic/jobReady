@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <div className="flex-shrink-0 text-2xl font-bold">
-            <Link href="/">CVly</Link>
+            <Link href="/">JobReady</Link>
           </div>
 
           {/* Desktop Links */}
