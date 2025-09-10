@@ -11,8 +11,8 @@ export default function Builder() {
 
   return (
     <section className="max-w-5xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold mb-6">CV Builder</h1>
-      
+      <h1 className="text-3xl font-bold mb-6 text-center">CV Builder</h1>
+
       <div className="flex flex-col lg:flex-row gap-8">
         {/* Form on the left */}
         <div className="flex-1">
@@ -21,7 +21,9 @@ export default function Builder() {
 
         {/* Preview on the right */}
         <div className="flex-1">
-          <Preview cv={cv} />
+          <div className="hidden lg:block bg-blue-900 fixed top-24 right-8 w-[500px] max-h-[80vh] overflow-y-auto border p-4 rounded shadow-lg z-50">
+            <Preview cv={cv} />
+          </div>
         </div>
       </div>
     </section>

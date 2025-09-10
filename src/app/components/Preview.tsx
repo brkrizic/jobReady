@@ -1,5 +1,5 @@
 import { cvType } from "../types/cvType";
-import Minimalist from "./templates/Minimalistic";
+import Minimalist from "./templates/Minimalist";
 
 type PreviewProps = {
     cv: cvType
