@@ -1,36 +1,36 @@
 export type cvType = {
   header: {
     fullname: string;
-    phoneNumber: string;
+    phoneNumber?: string;
     email: string;
-    url?: string; // LinkedIn / GitHub / Portfolio URL
-    location?: string; // city + country
+    url?: string;       // optional
+    location?: string;  // optional
   };
-  summary?: string; // Professional summary / objective
+  summary?: string;
 
   workExperience?: {
-    title: string;           // Job title
-    company: string;         // Company name
-    location?: string;       // Optional location
-    startDate: string;       // Month/Year
-    endDate?: string;        // Month/Year or 'Present'
-    bullets?: string[];      // Achievements / responsibilities
+    title: string;
+    company: string;
+    location?: string;
+    startDate?: string;
+    endDate?: string;
+    bullets?: string[];
   }[];
 
   education?: {
-    degree: string;          // e.g., BSc Computer Science
-    school: string;          // School / University
+    degree: string;
+    school: string;
     location?: string;
     graduationYear?: string;
-    gpa?: string;            // Optional
+    gpa?: string;
   }[];
 
-  skills?: string[];         // Technical & soft skills
+  skills?: string[];
 
   projects?: {
     name: string;
     description?: string;
-    link?: string;           // GitHub / website
+    link?: string;
     bullets?: string[];
   }[];
 
@@ -42,8 +42,8 @@ export type cvType = {
 
   languages?: {
     name: string;
-    proficiency?: string;    // e.g., Native / Fluent / Intermediate
+    proficiency?: string;
   }[];
 
-  interests?: string[];       // Optional personal interests
+  interests?: string[];
 };

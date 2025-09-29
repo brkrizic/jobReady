@@ -1,13 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Form from "../components/Form";
 import Preview from "../components/Preview";
 import { cvType } from "../types/cvType";
 import { initialCVState } from "../data/initialCVState";
+import { useScreenSize } from "../hook/useScreenSize";
+import { TemplateContext } from "../context/TemplateContext";
 
 export default function Builder() {
   const [cv, setCv] = useState<cvType>(initialCVState);
+
+  const { template } = useContext(TemplateContext);
 
   return (
     <section className="max-w-5xl mx-auto px-4 py-12">
@@ -20,9 +24,16 @@ export default function Builder() {
         </div>
 
         {/* Preview on the right */}
-        <div className="flex-1">
-          <div className="hidden lg:block bg-blue-900 fixed top-24 right-8 w-[500px] max-h-[80vh] overflow-y-auto border p-4 rounded shadow-lg z-50">
-            <Preview cv={cv} />
+        <div className="hidden lg:block">
+          <div
+            className="bg-blue-900 overflow-y-auto border p-3 rounded shadow-lg sticky top-8"
+            style={{
+              width: 600,                   // comfortable demo width
+              height: "80vh",               // almost full height
+              minWidth: 500,                // don’t shrink too much
+            }}
+          >
+            <Preview cv={cv} template={template} />
           </div>
         </div>
       </div>

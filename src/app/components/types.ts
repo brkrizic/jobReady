@@ -1,0 +1,1 @@
+export type Templates = "Minimalist" | "ModernProfessional" | "CreativeHighlight";
