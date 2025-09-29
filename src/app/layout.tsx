@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Job Ready"
+  title: "JobReady"
 };
 
 export default function RootLayout({
